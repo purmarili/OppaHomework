@@ -21,7 +21,7 @@ public class TaskBean {
     public TaskBean(HistoricTask task){
         this.assignee = task.getAssignee();
         this.id = Integer.toString(task.getId());
-        status = new Status();
+        status = new Status(task);
     }
 
     public String getId() {
