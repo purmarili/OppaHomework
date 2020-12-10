@@ -36,9 +36,9 @@ public class TaskBean {
         return assignee;
     }
 
-    public void setAssignee(String assignee) {
-        this.assignee = assignee;
-    }
+//    public void setAssignee(String assignee) {
+//        this.assignee = assignee;
+//    }
 
     public Status getStatus() {
         return status;
