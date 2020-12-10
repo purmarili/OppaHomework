@@ -28,9 +28,9 @@ public class TaskBean {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+//    public void setId(String id) {
+//        this.id = id;
+//    }
 
     public String getAssignee() {
         return assignee;
@@ -44,12 +44,7 @@ public class TaskBean {
         return status;
     }
 
-    /*
-     garedan rom ar sheucvalot historictask-s statusi
-     tuki garedan dasetva ar unda xdebodes taskis monacemebis
-     ubralod wavshlit seterebs an private-ze gadaviyvant
-     */
-    private void setStatus(Status status) {
-        this.status = status;
-    }
+//    private void setStatus(Status status) {
+//        this.status = status;
+//    }
 }
