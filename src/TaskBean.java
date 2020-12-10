@@ -1,15 +1,16 @@
 import java.io.ObjectInputFilter;
 
 public class TaskBean {
+
     private String id;
     private String assignee;
 
     /*
-    ar vicodi romeli status klasi iyo gamosayenebeli da am shemtxvevashi
-    OjbectInputFilter.Status gamoviyene, "done"-is dabrunebashi
-    vtvli OjbectInputFilter.Status.ALLOWED enum-is gamoyenebas
+    status klass rom ar sheeqmna kompaileristvis problema
+    shevqmeni axali Status class da 3 rendom stringidan vabrunebineb
+    romelimes, HistoricTask-is shemtxvevashi sul iqneba "done"
      */
-    private ObjectInputFilter.Status status;
+    private Status status;
 
     public TaskBean(Task task){
         this.assignee = task.getAssignee();
@@ -20,7 +21,7 @@ public class TaskBean {
     public TaskBean(HistoricTask task){
         this.assignee = task.getAssignee();
         this.id = Integer.toString(task.getId());
-        status = ObjectInputFilter.Status.ALLOWED;
+        status = new Status();
     }
 
     public String getId() {
@@ -39,7 +40,7 @@ public class TaskBean {
         this.assignee = assignee;
     }
 
-    public ObjectInputFilter.Status getStatus() {
+    public Status getStatus() {
         return status;
     }
 
@@ -48,7 +49,7 @@ public class TaskBean {
      tuki garedan dasetva ar unda xdebodes taskis monacemebis
      ubralod wavshlit seterebs an private-ze gadaviyvant
      */
-    private void setStatus(ObjectInputFilter.Status status) {
+    private void setStatus(Status status) {
         this.status = status;
     }
 }

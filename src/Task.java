@@ -6,5 +6,5 @@ public interface Task {
     String getId();
     String getExecutionId();
     Date getCreationTime();
-    ObjectInputFilter.Status getStatus();
+    Status getStatus();
 }
